@@ -9,4 +9,10 @@ export const aiApi = {
 
   getFocusHealth: () =>
     apiClient.get('/ai/focus-health'),
+
+  getFocusDNA: () =>
+    apiClient.get('/analytics/focus-dna'),
+
+  getDistractionCost: (date?: string) =>
+    apiClient.get('/analytics/distraction-cost', { params: date ? { target_date: date } : {} }),
 }

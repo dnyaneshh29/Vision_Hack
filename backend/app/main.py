@@ -11,6 +11,7 @@ from app.core.config import settings
 from app.api.v1 import auth, sessions, notes, checklist, links, tabs, events, dashboard
 from app.api.v1 import extension_state
 from app.api.v1 import ai_insights
+from app.api.v1 import analytics
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -59,6 +60,7 @@ app.include_router(events.router, prefix=prefix)
 app.include_router(dashboard.router, prefix=prefix)
 app.include_router(extension_state.router, prefix=prefix)
 app.include_router(ai_insights.router, prefix=prefix)
+app.include_router(analytics.router, prefix=prefix)
 
 
 @app.get("/health")

@@ -7,6 +7,8 @@ import { SessionCard } from '../components/features/SessionCard'
 import { SessionCardSkeleton } from '../components/ui/Skeleton'
 import { ExtensionStatus } from '../components/features/ExtensionStatus'
 import { FocusHealthWidget } from '../components/ai/FocusHealthWidget'
+import { FocusDNAWidget } from '../components/ai/FocusDNAWidget'
+import { DistractionCostMeter } from '../components/ai/DistractionCostMeter'
 import { Card } from '../components/ui/Card'
 import { Card3D } from '../components/ui/Card3D'
 import { Button } from '../components/ui/Button'
@@ -345,6 +347,12 @@ export function Dashboard() {
 
             {/* AI Focus Health — additive widget */}
             <FocusHealthWidget />
+
+            {/* Focus DNA — personalization */}
+            <FocusDNAWidget />
+
+            {/* Distraction Cost Meter */}
+            <DistractionCostMeter />
           </div>
         </div>
       </div>
